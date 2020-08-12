@@ -1,0 +1,76 @@
+
+
+<div id="wrapper">
+             <div id="page" class="container">
+                 <h1 class="heading has-text-weigt-bold is-size-6">CONTACT</h1>
+
+
+         <form method="POST" action="/cart">
+            @csrf
+             <div class="field">
+                 <label class="label" for="name">Name</label>
+
+                 <div class="control">
+                     <textarea 
+                     class="textarea" 
+                     name="name" 
+                     id="name"
+                     >{{ old('name') }}</textarea>
+                     @error('name')
+                     <p class="help is-danger">{{ $errors->first('name') }}</p>
+                     @enderror
+                 </div> 
+             </div>
+
+             <div class="field">
+                 <label class="label" for="email">Email</label>
+
+                 <div class="control">
+                     <textarea 
+                     class="textarea" 
+                     name="email" 
+                     id="email"
+                     >{{ old('email') }}</textarea>
+                      @error('email')
+                     <p class="help is-danger">{{ $errors->first('email') }}</p>
+                     @enderror
+                 </div>
+             </div>
+             <div class="field">
+                 <label class="label" for="email">Subject</label>
+
+                 <div class="control">
+                     <textarea 
+                     class="textarea" 
+                     name="subject" 
+                     id="subject"
+                     >{{ old('subject') }}</textarea>
+                      @error('subject')
+                     <p class="help is-danger">{{ $errors->first('subject') }}</p>
+                     @enderror
+                 </div>
+             </div>
+
+                <div class="field">
+                 <label class="label" for="message">Message</label>
+
+             <div class="control">
+                 <textarea 
+                 class="textarea" 
+                 name="message" 
+                 id="message"
+                 >{{ old('message') }}</textarea>
+                  @error('message')
+                     <p class="help is-danger">{{ $errors->first('message') }}</p>
+                     @enderror
+             </div>
+             </div>
+             <div class="field is grouped">
+                 <div class="control">
+                     <button class="button is-link" type="submit">SUBMIT</button>
+                 </div>
+             </div>
+
+         </form>
+             </div>
+         </div>
